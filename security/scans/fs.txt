@@ -1,0 +1,18 @@
+2026-10-08T21:32:02+03:00	INFO	[vuln] Vulnerability scanning is enabled
+2026-10-08T21:32:02+03:00	INFO	[secret] Secret scanning is enabled
+2026-10-08T21:32:02+03:00	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-10-08T21:32:02+03:00	INFO	[secret] Please see https://trivy.dev/docs/v0.72/guide/scanner/secret#recommendation for faster secret detection
+2026-10-08T21:32:02+03:00	INFO	Number of language-specific files	num=1
+2026-10-08T21:32:02+03:00	INFO	[gomod] Detecting vulnerabilities...
+
+Report Summary
+
+┌────────────┬───────┬─────────────────┬─────────┐
+│   Target   │ Type  │ Vulnerabilities │ Secrets │
+├────────────┼───────┼─────────────────┼─────────┤
+│ app/go.mod │ gomod │        0        │    -    │
+└────────────┴───────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+

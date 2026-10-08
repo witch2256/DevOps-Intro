@@ -131,3 +131,40 @@ func TestMetrics_ExposesPrometheusFormat(t *testing.T) {
 	}
 }
 
+func TestSecurityHeaders_PresentOnAllResponses(t *testing.T) {
+	srv := newTestServer(t)
+
+	cases := []struct {
+		name   string
+		method string
+		target string
+	}{
+		{"health 200", http.MethodGet, "/health"},
+		{"notes list 200", http.MethodGet, "/notes"},
+		{"not found 404", http.MethodGet, "/notes/99999"},
+		{"bad request 400", http.MethodPost, "/notes"},
+	}
+
+	want := map[string]string{
+		"X-Content-Type-Options": "nosniff",
+		"X-Frame-Options":        "DENY",
+		"Content-Security-Policy": "default-src 'none'",
+		"Referrer-Policy":        "no-referrer",
+		"Cache-Control":          "no-store",
+	}
+
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			rec := do(t, srv, tc.method, tc.target, nil)
+			for header, expected := range want {
+				got := rec.Header().Get(header)
+				if got != expected {
+					t.Errorf("%s: header %q = %q, want %q",
+						tc.name, header, got, expected)
+				}
+			}
+		})
+	}
+}
+
+

@@ -1,0 +1,46 @@
+2026-10-08T21:33:14+03:00	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-10-08T21:33:14+03:00	INFO	[checks-client] Using existing checks from cache	path="/Users/witch/Library/Caches/trivy/policy/content"
+2026-10-08T21:33:14+03:00	INFO	Detected config files	num=1
+
+Report Summary
+
+┌────────────┬────────────┬───────────────────┐
+│   Target   │    Type    │ Misconfigurations │
+├────────────┼────────────┼───────────────────┤
+│ Dockerfile │ dockerfile │         0         │
+└────────────┴────────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+2026-10-08T21:33:39+03:00	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-10-08T21:33:39+03:00	INFO	[checks-client] Using existing checks from cache	path="/Users/witch/Library/Caches/trivy/policy/content"
+2026-10-08T21:33:39+03:00	INFO	Detected config files	num=0
+2026-10-08T21:33:39+03:00	WARN	[report] Supported files for scanner(s) not found.	scanners=[misconfig]
+
+Report Summary
+
+┌────────┬──────┬───────────────────┐
+│ Target │ Type │ Misconfigurations │
+├────────┼──────┼───────────────────┤
+│   -    │  -   │         -         │
+└────────┴──────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+2026-10-08T21:34:10+03:00	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-10-08T21:34:10+03:00	INFO	[checks-client] Using existing checks from cache	path="/Users/witch/Library/Caches/trivy/policy/content"
+2026-10-08T21:34:10+03:00	INFO	Detected config files	num=1
+
+Report Summary
+
+┌────────────────┬────────────┬───────────────────┐
+│     Target     │    Type    │ Misconfigurations │
+├────────────────┼────────────┼───────────────────┤
+│ app/Dockerfile │ dockerfile │         0         │
+└────────────────┴────────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
